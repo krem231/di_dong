@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#201c1c"
+    android:padding="16dp">
+
+    <!-- Ảnh bìa bên trái -->
+    <ImageView
+        android:id="@+id/imageTruyen1"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/box_shape"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTruyen1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nigga"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@+id/imageTruyen1"
+        app:layout_constraintStart_toEndOf="@id/imageTruyen1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="12dp" />
+
+    <!-- Rating và trạng thái -->
+    <TextView
+        android:id="@+id/ratingInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⭐ 7.3 • Releasing"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTruyen1"
+        app:layout_constraintStart_toStartOf="@id/titleTruyen1" />
+
+    <!-- Nút View Details -->
+    <Button
+        android:id="@+id/btnViewDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Details"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/ratingInfo"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
